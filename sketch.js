@@ -47,8 +47,8 @@ var createScene = function () {
     //create sphere w params (x, y, z, diameter)
     var s2 = createSphere(0, 1, 10, 10);
     //wrap sphere in material from local file
-    s2.material = fileMat('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', scene);
-    s2.rotation.x -= Math.PI / 6;
+    s2.material = fileMat('https://img4.goodfon.com/wallpaper/nbig/c/a0/space-hubble-galaxy-nasa-kosmos-zvezdy-galaktika.jpg', scene);
+    s2.rotation.y += Math.PI / 6;
 
     //create box with params x, y, z, width, height, depth
     var b1 = createBox(2, 2.5, -2, 1, 1, 1);
