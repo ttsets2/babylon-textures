@@ -35,29 +35,36 @@ var createScene = function () {
     scene.clearColor = new BABYLON.Color3.FromHexString('#000');
 
 
+
+
+
+
     //create sphere w params (x, y, z, diameter)
-    var s1 = createSphere(-1, 1, -1, 2);
-
+    var s1 = createSphere(1, 1, -1, 3);
     //wrap sphere in material from URL file
-    s1.material = fileMat('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', scene);
+    s1.material = hexMat('#7851a9');
     
-    //create sphere
-    var s2 = createSphere(2, 2, 0.5, 2);
-
+    //create sphere w params (x, y, z, diameter)
+    var s2 = createSphere(0, 1, 10, 10);
     //wrap sphere in material from local file
-    s2.material = fileMat('moon.jpg', scene);
-    
-    //create box with params x, y, z, width, height, ddepth
-    var b1 = createBox(2, -2, 2, 1, 1, 1);
+    s2.material = fileMat('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', scene);
+    s2.rotation.x -= Math.PI / 6;
 
+    //create box with params x, y, z, width, height, depth
+    var b1 = createBox(2, 2.5, -2, 1, 1, 1);
     //wrap box in material colored with hex code
-    b1.material = hexMat('#ff0000');
-    b1.rotation.z += Math.PI/4;
-
-    var b2 = createBox(0, -2, -1.5, 2, 2, 2);
-
+    b1.material = fileMat('https://upload.wikimedia.org/wikipedia/commons/c/c0/Denmark_crown.png', scene);
+    b1.rotation.z -= Math.PI/4;
+        
+    //create box with params x, y, z, width, height, ddepth
+    var b2 = createBox(0, -2, -1.5, 10, 2, 10);
     //wrap box in material from local file
-    b2.material = fileMat('why.png');
+    b2.material = fileMat('https://media.fisheries.noaa.gov/styles/original/s3/dam-migration/ocean-near-bogoslof_8-19_mms.jpg?itok=TGWbO2P1', scene);
+    b2.rotation.y += Math.PI / 2;
+
+
+
+
 
     return scene;
 };
